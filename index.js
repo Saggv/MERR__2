@@ -31,6 +31,7 @@ app.get('/', (req, res)=>{
 
 if(process.env.NODE_ENV ==='production'){
         //set static folder
+        
         app.use( express.static('hotel/build'));
 
         app.get('*', (req, res)=>{
