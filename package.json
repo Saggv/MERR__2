@@ -1,0 +1,28 @@
+{
+  "name": "hotel-august",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.2",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.9",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "server": "nodemon index.js",
+    "hotel-install": "npm install --prefix hotel",
+    "start": "node index.js",
+    "hotel": "npm start --prefix hotel",
+    "dev": "concurrently \"npm run server\" \"npm run hotel\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix hotel && npm run build --prefix hotel"
+  },
+  "author": "",
+  "license": "ISC"
+}
