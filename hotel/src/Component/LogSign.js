@@ -35,6 +35,7 @@ class LogSign extends Component {
                 alert("Enter all field !!!");
              }
             else{
+                console.log(data)
                this.props.Sign_up(data)
             }
 
@@ -48,6 +49,8 @@ class LogSign extends Component {
        const {err} = this.props.infoUser;
 
        const {isUser} = this.props.match.params;
+       const Haha1= this.props.match.params.isUser;
+       console.log(Haha1);
         return (
             <div className="login">
                 <form className="form-user">

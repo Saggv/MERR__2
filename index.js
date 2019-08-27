@@ -15,12 +15,12 @@ app.use(bodyParser.json());
 
 app.use(express.json());
 
+
 //Connect to mongoose
 
 mongoose.connect(process.env.MongooseURL, {useNewUrlParser:true,useFindAndModify:false})
         .then( ()=>console.log("Connect with mongoose success...."))
         .catch( (err)=>console.log(err))
-
 
 app.use('/rooms',Room);
 app.use('/user', Users)
