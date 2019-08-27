@@ -25,9 +25,6 @@ mongoose.connect(process.env.MongooseURL, {useNewUrlParser:true,useFindAndModify
 app.use('/rooms',Room);
 app.use('/user', Users)
 
-app.get('/', (req, res)=>{
-       res.send("hello");
-})
 
 if(process.env.NODE_ENV ==='production'){
         //set static folder
